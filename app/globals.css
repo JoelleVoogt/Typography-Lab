@@ -1,8 +1,19 @@
 @import "tailwindcss";
 
+@theme {
+  --color-cream: #ebead4;
+  --color-dark: #1a1a1a;
+  --color-accent: #dad33a;
+}
+
+@theme inline {
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
 body {
-  background-color: #1a1a1a;
-  color: #ebead4;
+  background-color: var(--color-dark);
+  color: var(--color-cream);
   overflow-x: hidden;
 }
 
