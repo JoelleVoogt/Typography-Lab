@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
+import { SmoothScroll } from './components/SmoothScroll'
 import './globals.css'
 
 const fraunces = Fraunces({
@@ -25,7 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/light.svg" media="(prefers-color-scheme: light)" />
         <link rel="icon" href="/dark.svg" media="(prefers-color-scheme: dark)" />
       </head>
-      <body>{children}</body>
+      <body>
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
   )
 }
