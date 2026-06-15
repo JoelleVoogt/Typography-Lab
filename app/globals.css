@@ -64,8 +64,28 @@ body {
   cursor: pointer;
 }
 
+/* ── Type indicator blink ─────────────────────────── */
+@keyframes blink {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@utility animate-blink {
+  animation: blink 1.5s step-start infinite;
+}
+
 /* ── Playground contentEditable placeholder ───────── */
 .playground-input:empty::before {
-  content: 'Your favorite words';
+  content: "Your favorite words";
   pointer-events: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
