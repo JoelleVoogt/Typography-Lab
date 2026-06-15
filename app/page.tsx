@@ -126,7 +126,7 @@ export default function Home() {
           }}
         >
           {
-            "A place to feel a typeface. By adjusting the weight on the slider, the letters respond in real time. This version is built around Fraunces."
+            "A place to feel a typeface. Drag the slider to ajust the weight of the letters in real time, or preview your favorite words in the chosen font family. This version is built around Fraunces."
           }
         </p>
       </section>
