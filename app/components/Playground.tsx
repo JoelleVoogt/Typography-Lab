@@ -28,7 +28,7 @@ export function Playground() {
             contentEditable
             suppressContentEditableWarning
             role="textbox"
-            aria-label="Type your favorite words"
+            aria-label="Type your words"
             className="playground-input outline-none text-cream font-semibold whitespace-nowrap font-display"
             style={{
               fontVariationSettings: FV,
