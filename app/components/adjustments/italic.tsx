@@ -13,7 +13,7 @@ export default function Italic() {
             Italic
           </label>
           <Switch.Root
-            className="relative h-[32px] w-[64px] cursor-default rounded-full bg-[#EBEAD4] outline-none data-[state=checked]:bg-[#DAD33A]"
+            className="relative h-[32px] w-[64px] cursor-default rounded-full bg-[#EBEAD4] outline-none data-[state=checked]:bg-[#DAD33A] cursor-pointer"
             id="airplane-mode"
           >
             <Switch.Thumb
