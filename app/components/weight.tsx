@@ -54,8 +54,8 @@ export default function WeightSection() {
       id="weights"
       className="max-w-7xl mx-auto px-4 pb-30 sm:pb-40 flex flex-col sm:flex-row gap-20 sm:gap-24 sm:items-start"
     >
+      <WeightCard defaultWeight={100} />
       <WeightCard defaultWeight={400} />
-      <WeightCard defaultWeight={700} />
       <WeightCard defaultWeight={900} />
     </section>
   );
