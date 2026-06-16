@@ -1,6 +1,6 @@
 import { FV } from "../lib/constants";
 
-export function Hero() {
+export default function Hero() {
   return (
     <section id="family" className="pb-24 sm:pb-[280px]">
       <div className="relative">

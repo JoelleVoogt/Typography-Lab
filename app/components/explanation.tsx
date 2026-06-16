@@ -1,6 +1,6 @@
 import { FV } from "../lib/constants";
 
-export function Explanation() {
+export default function Explanation() {
   return (
     <section className="max-w-[1200px] mx-auto px-4 py-30 sm:py-40 flex flex-col sm:flex-row gap-8 sm:gap-24">
       <p

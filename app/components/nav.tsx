@@ -3,7 +3,7 @@
 import { useLenis } from "lenis/react";
 import { FV } from "../lib/constants";
 
-export function Nav() {
+export default function Nav() {
   const lenis = useLenis();
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>, target: string) {

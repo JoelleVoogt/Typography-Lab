@@ -1,8 +1,11 @@
-import { Nav } from './components/Nav';
-import { Hero } from './components/Hero';
-import { Explanation } from './components/Explanation';
-import { WeightSection } from './components/WeightSection';
-import { Playground } from './components/Playground';
+import "./globals.css";
+import Nav from "./components/nav";
+import Hero from "./components/hero";
+import Explanation from "./components/explanation";
+import WeightSection from "./components/weight";
+import Playground from "./components/playground";
+import Filtering from "./components/filtering";
+
 export default function Home() {
   return (
     <div className="bg-dark min-h-screen">
@@ -11,6 +14,7 @@ export default function Home() {
       <Explanation />
       <WeightSection />
       <Playground />
+      <Filtering />
     </div>
   );
 }

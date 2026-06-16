@@ -13,7 +13,7 @@ function WeightCard({ defaultWeight }: { defaultWeight: number }) {
         style={{
           fontWeight: weight,
           fontVariationSettings: FV,
-          fontSize: "287px",
+          fontSize: "clamp(120px, 72vw, 287px)",
         }}
       >
         Ra
@@ -48,11 +48,11 @@ function WeightCard({ defaultWeight }: { defaultWeight: number }) {
   );
 }
 
-export function WeightSection() {
+export default function WeightSection() {
   return (
     <section
       id="weights"
-      className="max-w-[1200px] mx-auto px-4 pb-30 sm:pb-40 flex flex-col sm:flex-row gap-20 sm:gap-24 items-start"
+      className="max-w-[1200px] mx-auto px-4 pb-30 sm:pb-40 flex flex-col sm:flex-row gap-20 sm:gap-24 sm:items-start"
     >
       <WeightCard defaultWeight={400} />
       <WeightCard defaultWeight={700} />

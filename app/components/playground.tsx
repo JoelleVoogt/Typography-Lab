@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { FV } from "../lib/constants";
 
-export function Playground() {
+export default function Playground() {
   const [focused, setFocused] = useState(false);
 
   return (
