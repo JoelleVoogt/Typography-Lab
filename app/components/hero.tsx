@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section id="family" className="pb-24 sm:pb-[280px]">
       <div className="relative">
-        <div className="bg-cream overflow-clip py-40 flex items-center justify-center">
+        <div className="bg-cream overflow-clip py-32 flex items-center justify-center">
           <p
             className="text-dark whitespace-nowrap leading-[1.5] font-semibold font-display"
             style={{
