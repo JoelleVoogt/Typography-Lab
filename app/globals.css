@@ -65,7 +65,7 @@ body {
   cursor: pointer;
 }
 
-/* ── Type indicator blink ─────────────────────────── */
+/* ── Type indicator blink */
 @keyframes blink {
   0%,
   60% {
@@ -81,7 +81,7 @@ body {
   animation: blink 1.5s step-start infinite;
 }
 
-/* ── Playground contentEditable placeholder ───────── */
+/* ── Playground contentEditable placeholder */
 .playground-input:empty::before {
   content: "Your favorite words";
   pointer-events: none;
