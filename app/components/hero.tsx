@@ -4,12 +4,12 @@ export default function Hero() {
   return (
     <section id="family" className="pb-24 sm:pb-[280px]">
       <div className="relative">
-        <div className="bg-cream overflow-clip py-32 flex items-center justify-center">
+        <div className="bg-cream -mt-px overflow-clip py-52 flex items-center justify-center text-wrap">
           <p
-            className="text-dark whitespace-nowrap leading-[1.5] font-semibold font-display"
+            className="text-dark leading-[0.7] font-semibold font-display max-w-7xl text-center tracking-tight"
             style={{
               fontVariationSettings: FV,
-              fontSize: "clamp(60px, 18vw, 327px)",
+              fontSize: "clamp(200px, 18vw, 320px)",
             }}
           >
             Fraunces

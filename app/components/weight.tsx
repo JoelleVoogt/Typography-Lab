@@ -21,7 +21,7 @@ function WeightCard({ defaultWeight }: { defaultWeight: number }) {
       <div className="flex flex-col gap-3">
         <div
           className="flex items-center justify-between text-cream whitespace-nowrap font-sans"
-          style={{ fontSize: "17.5px", fontWeight: 500 }}
+          style={{ fontSize: "16px", fontWeight: 500 }}
         >
           <span>Weight</span>
           <span>{weight}</span>

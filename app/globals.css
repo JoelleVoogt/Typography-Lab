@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Weight slider ────────────────────────────────── */
+/* Weight slider */
 .weight-slider {
   -webkit-appearance: none;
   appearance: none;
@@ -65,7 +65,7 @@ body {
   cursor: pointer;
 }
 
-/* ── Type indicator blink */
+/* Type indicator blink */
 @keyframes blink {
   0%,
   60% {
@@ -81,7 +81,7 @@ body {
   animation: blink 1.5s step-start infinite;
 }
 
-/* ── Playground contentEditable placeholder */
+/* Playground content editable placeholder */
 .playground-input:empty::before {
   content: "Your favorite words";
   pointer-events: none;
