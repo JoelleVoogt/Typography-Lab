@@ -17,12 +17,13 @@ export default function Filtering() {
           <CaseType />
           <FontSize />
         </div>
-        <div className="flex flex-row gap-10 py-6">
-          <div className="flex flex-co gap-4 flex-col py-8 justify-center w-xs">
+        <div className="flex flex-row gap-10 py-10">
+          <div className="flex flex-co gap-4 flex-col py-8 justify-center w-md">
             <Width />
             <Weight />
             <Italic />
           </div>
+          <div className="w-px self-stretch bg-[#6E6D64] rounded-md"></div>
           <Result />
         </div>
       </section>
