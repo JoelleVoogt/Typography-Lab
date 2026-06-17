@@ -21,7 +21,9 @@ type CaseType = "Sentence case" | "UPPERCASE" | "lower case" | "Title case";
 function applyCase(text: string, caseType: CaseType) {
   switch (caseType) {
     case "Sentence case":
-      return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+      return text
+        .toLowerCase()
+        .replace(/(^\s*\w|[.!?]\s+\w)/g, (match) => match.toUpperCase());
     case "UPPERCASE":
       return text.toUpperCase();
     case "lower case":
