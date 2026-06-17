@@ -38,7 +38,7 @@ function WeightCard({ defaultWeight }: { defaultWeight: number }) {
             max={900}
             value={weight}
             onChange={(e) => setWeight(Number(e.target.value))}
-            className="weight-slider"
+            className="thumb-filter"
             aria-label={`Font weight, currently ${weight}`}
           />
         </div>

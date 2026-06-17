@@ -48,7 +48,7 @@ export default function Custom() {
   return (
     <>
       <section className="flex flex-col max-w-7xl mx-auto pt-12 pb-64 lg:pb-96 p-4 xl:pt-0">
-        <div className="flex flex-col xl:flex-row w-full justify-center items-center bg-[#2B2B29] rounded-t-md xl:rounded-md xl:p-0">
+        <div className="flex flex-col xl:flex-row w-full justify-center items-center bg-[#2B2B29] rounded-t-md xl:rounded-md xl:p-0 [--slider-outline:#2b2b29]">
           <Story
             onValueChange={(value) => setMode(value as "Story" | "Alphabet")}
           />
@@ -58,7 +58,7 @@ export default function Custom() {
         </div>
         <div className="flex flex-col xl:flex-row gap-8 xl:gap-10 py-0 xl:py-10">
           <div className="flex flex-col py-0 xl:pt-8 justify-start w-full xl:w-md">
-            <div className="flex flex-col bg-[#2B2B29] rounded-b-md xl:rounded-none xl:bg-transparent">
+            <div className="flex flex-col bg-[#2B2B29] rounded-b-md xl:rounded-none xl:bg-transparent [--slider-outline:#2b2b29] xl:[--slider-outline:#1a1a1a]">
               <Width onValueChange={setLetterSpacing} />
               <Weight onValueChange={setFontWeight} />
               <Italic onCheckedChange={setItalic} />
