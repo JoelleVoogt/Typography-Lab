@@ -10,7 +10,7 @@ import Result from "./result";
 export default function Filtering() {
   return (
     <>
-      <section className="flex flex-col max-w-7xl mx-auto pt-12 pb-120">
+      <section className="flex flex-row md:flex-col max-w-7xl mx-auto pt-12 pb-120">
         <div className="flex flex-row w-full justify-center items-center bg-[#2B2B29] rounded-md">
           <Story />
           <TypeSomething />

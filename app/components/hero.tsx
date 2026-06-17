@@ -9,7 +9,7 @@ export default function Hero() {
             className="text-dark leading-[0.7] font-semibold font-display max-w-7xl text-center tracking-tight"
             style={{
               fontVariationSettings: FV,
-              fontSize: "clamp(200px, 18vw, 320px)",
+              fontSize: "clamp(80px, 18vw, 320px)",
             }}
           >
             Fraunces
