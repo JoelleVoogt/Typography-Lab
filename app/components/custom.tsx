@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Story from "./filtering/story";
 import TypeSomething from "./filtering/typesomething";
 import CaseType from "./filtering/casetype";
@@ -7,24 +10,34 @@ import Weight from "./adjustments/weight";
 import Italic from "./adjustments/italic";
 import Result from "./result";
 
+const CONTENT = {
+  Story:
+    "The quick brown fox jumps over the lazy dog. Sphinx of black quartz, judge my vow. How quickly daft jumping zebras vex! The five boxing wizards jump quickly.",
+  Alphabet: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+};
+
 export default function Custom() {
+  const [mode, setMode] = useState<"Story" | "Alphabet">("Story");
+
   return (
     <>
       <section className="flex flex-col max-w-7xl mx-auto pt-12 pb-64 lg:pb-64 p-4 xl:pt-0">
         <div className="flex flex-col lg:flex-row w-full justify-center items-center bg-[#2B2B29] rounded-md p-2 xl:p-0 gap-2 lg:gap-0">
-          <Story />
+          <Story
+            onValueChange={(value) => setMode(value as "Story" | "Alphabet")}
+          />
           <TypeSomething />
           <CaseType />
           <FontSize />
         </div>
         <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 py-2 xl:py-10">
-          <div className="flex flex-co gap-1 lg:gap-4 flex-col py-0 xl:py-8 justify-center w-full xl:w-md">
+          <div className="flex flex-co gap-1 lg:gap-4 flex-col py-0 xl:pt-8 justify-start w-full xl:w-md">
             <Width />
             <Weight />
             <Italic />
           </div>
           <div className="hidden xl:block w-px self-stretch bg-[#6E6D64] rounded-md"></div>
-          <Result />
+          <Result text={CONTENT[mode]} />
         </div>
       </section>
     </>

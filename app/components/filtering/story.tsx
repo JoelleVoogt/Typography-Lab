@@ -1,9 +1,13 @@
 import { Select } from "radix-ui";
 import { ChevronDown } from "lucide-react";
 
-export default function StoryOrAlphabet() {
+export default function StoryOrAlphabet({
+  onValueChange,
+}: {
+  onValueChange?: (value: string) => void;
+}) {
   return (
-    <Select.Root defaultValue="Story">
+    <Select.Root defaultValue="Story" onValueChange={onValueChange}>
       <Select.Trigger className="group border-r border-r-[#54544d] flex gap-2 h-14 items-center px-4 hidden lg:flex w-2xs outline-none cursor-default data-[state=open]:bg-[rgba(235,234,212,0.2)]">
         <Select.Value />
         <Select.Icon asChild>
