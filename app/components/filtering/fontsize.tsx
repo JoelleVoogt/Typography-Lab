@@ -4,7 +4,7 @@ export default function FontSize() {
   return (
     <>
       <div className="flex flex-row p-4 gap-2 items-center w-full xl:w-fit">
-        <p className="">32px</p>
+        <p className="">36px</p>
         {/* <p className="text-lg font-bold">Aa</p> */}
 
         <div className="flex flex-col pl-4 lg:pl-4 lg:pr-2 gap-2 w-full xl:w-52">

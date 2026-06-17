@@ -8,7 +8,7 @@ export default function StoryOrAlphabet({
 }) {
   return (
     <Select.Root defaultValue="Story" onValueChange={onValueChange}>
-      <Select.Trigger className="group border-r border-r-[#54544d] flex gap-2 h-14 items-center px-4 hidden lg:flex w-2xs outline-none cursor-default data-[state=open]:bg-[rgba(235,234,212,0.2)]">
+      <Select.Trigger className="place-content-between xl:place-content-start border-b border-b-[#54544D] xl:border-b-0  border-r-0 xl:border-r xl:border-r-[#54544d] flex gap-2 h-14 items-center px-4 w-full xl:w-2xs outline-none cursor-default data-[state=open]:bg-[rgba(235,234,212,0.2)]">
         <Select.Value />
         <Select.Icon asChild>
           <ChevronDown className="h-6 w-6 shrink-0 transition-transform duration-200 group-data-[state=open]:-scale-y-100" />

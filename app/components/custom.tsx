@@ -29,7 +29,7 @@ function applyCase(text: string, caseType: CaseType) {
     case "Title case":
       return text.replace(
         /\w\S*/g,
-        (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+        (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase(),
       );
   }
 }
@@ -41,7 +41,7 @@ export default function Custom() {
 
   return (
     <>
-      <section className="flex flex-col max-w-7xl mx-auto pt-12 pb-64 lg:pb-64 p-4 xl:pt-0">
+      <section className="flex flex-col max-w-7xl mx-auto pt-12 pb-64 lg:pb-96 p-4 xl:pt-0">
         <div className="flex flex-col lg:flex-row w-full justify-center items-center bg-[#2B2B29] rounded-md p-2 xl:p-0 gap-2 lg:gap-0">
           <Story
             onValueChange={(value) => setMode(value as "Story" | "Alphabet")}
