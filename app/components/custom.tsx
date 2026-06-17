@@ -18,6 +18,7 @@ const CONTENT = {
 
 export default function Custom() {
   const [mode, setMode] = useState<"Story" | "Alphabet">("Story");
+  const [customText, setCustomText] = useState("");
 
   return (
     <>
@@ -26,7 +27,7 @@ export default function Custom() {
           <Story
             onValueChange={(value) => setMode(value as "Story" | "Alphabet")}
           />
-          <TypeSomething />
+          <TypeSomething onValueChange={setCustomText} />
           <CaseType />
           <FontSize />
         </div>
@@ -37,7 +38,7 @@ export default function Custom() {
             <Italic />
           </div>
           <div className="hidden xl:block w-px self-stretch bg-[#6E6D64] rounded-md"></div>
-          <Result text={CONTENT[mode]} />
+          <Result text={customText || CONTENT[mode]} />
         </div>
       </section>
     </>
