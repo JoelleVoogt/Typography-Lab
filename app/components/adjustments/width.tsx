@@ -17,7 +17,7 @@ export default function Width({
 
   return (
     <>
-      <div className="flex flex-col p-4 gap-2">
+      <div className="flex flex-col p-4 gap-2 border-b border-[#54544D] xl:border-b-0">
         <div className="flex flex-row gap-4">
           <p className="w-full">Letter spacing</p>
           <p className="w-full text-right">{spacing}</p>

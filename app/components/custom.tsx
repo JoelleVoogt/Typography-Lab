@@ -48,7 +48,7 @@ export default function Custom() {
   return (
     <>
       <section className="flex flex-col max-w-7xl mx-auto pt-12 pb-64 lg:pb-96 p-4 xl:pt-0">
-        <div className="flex flex-col lg:flex-row w-full justify-center items-center bg-[#2B2B29] rounded-md p-2 xl:p-0 gap-2 lg:gap-0">
+        <div className="flex flex-col xl:flex-row w-full justify-center items-center bg-[#2B2B29] rounded-t-md xl:rounded-md xl:p-0">
           <Story
             onValueChange={(value) => setMode(value as "Story" | "Alphabet")}
           />
@@ -56,14 +56,22 @@ export default function Custom() {
           <CaseType onValueChange={(value) => setCaseType(value as CaseType)} />
           <FontSize onValueChange={setFontSize} />
         </div>
-        <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 py-2 xl:py-10">
-          <div className="flex flex-co gap-1 lg:gap-4 flex-col py-0 xl:pt-8 justify-start w-full xl:w-md">
-            <Width onValueChange={setLetterSpacing} />
-            <Weight onValueChange={setFontWeight} />
-            <Italic onCheckedChange={setItalic} />
+        <div className="flex flex-col xl:flex-row gap-8 xl:gap-10 py-0 xl:py-10">
+          <div className="flex flex-col py-0 xl:pt-8 justify-start w-full xl:w-md">
+            <div className="flex flex-col bg-[#2B2B29] rounded-b-md xl:rounded-none xl:bg-transparent">
+              <Width onValueChange={setLetterSpacing} />
+              <Weight onValueChange={setFontWeight} />
+              <Italic onCheckedChange={setItalic} />
+            </div>
           </div>
           <div className="hidden xl:block w-px self-stretch bg-[#6E6D64] rounded-md"></div>
-          <Result text={applyCase(customText || CONTENT[mode], caseType)} fontSize={fontSize} letterSpacing={letterSpacing} fontWeight={fontWeight} italic={italic} />
+          <Result
+            text={applyCase(customText || CONTENT[mode], caseType)}
+            fontSize={fontSize}
+            letterSpacing={letterSpacing}
+            fontWeight={fontWeight}
+            italic={italic}
+          />
         </div>
       </section>
     </>

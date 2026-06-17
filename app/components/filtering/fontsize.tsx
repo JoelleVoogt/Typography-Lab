@@ -17,7 +17,7 @@ export default function FontSize({
 
   return (
     <>
-      <div className="flex flex-row p-4 gap-2 items-center w-full xl:w-fit">
+      <div className="flex flex-row p-4 gap-2 items-center w-full xl:w-fit border-b border-[#54544D] xl:border-b-0">
         <p className="">{size}px</p>
 
         <div className="flex flex-col pl-4 lg:pl-4 lg:pr-2 gap-2 w-full xl:w-52">
