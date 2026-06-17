@@ -38,6 +38,7 @@ export default function Custom() {
   const [mode, setMode] = useState<"Story" | "Alphabet">("Story");
   const [customText, setCustomText] = useState("");
   const [caseType, setCaseType] = useState<CaseType>("Sentence case");
+  const [fontSize, setFontSize] = useState(36);
 
   return (
     <>
@@ -48,7 +49,7 @@ export default function Custom() {
           />
           <TypeSomething onValueChange={setCustomText} />
           <CaseType onValueChange={(value) => setCaseType(value as CaseType)} />
-          <FontSize />
+          <FontSize onValueChange={setFontSize} />
         </div>
         <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 py-2 xl:py-10">
           <div className="flex flex-co gap-1 lg:gap-4 flex-col py-0 xl:pt-8 justify-start w-full xl:w-md">
@@ -57,7 +58,7 @@ export default function Custom() {
             <Italic />
           </div>
           <div className="hidden xl:block w-px self-stretch bg-[#6E6D64] rounded-md"></div>
-          <Result text={applyCase(customText || CONTENT[mode], caseType)} />
+          <Result text={applyCase(customText || CONTENT[mode], caseType)} fontSize={fontSize} />
         </div>
       </section>
     </>

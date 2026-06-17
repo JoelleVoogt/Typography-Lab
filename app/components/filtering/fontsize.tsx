@@ -1,11 +1,24 @@
-import { ChevronDown } from "lucide-react";
+"use client";
 
-export default function FontSize() {
+import { useState } from "react";
+
+export default function FontSize({
+  onValueChange,
+}: {
+  onValueChange?: (value: number) => void;
+}) {
+  const [size, setSize] = useState(36);
+
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const newSize = Number(event.target.value);
+    setSize(newSize);
+    onValueChange?.(newSize);
+  }
+
   return (
     <>
       <div className="flex flex-row p-4 gap-2 items-center w-full xl:w-fit">
-        <p className="">36px</p>
-        {/* <p className="text-lg font-bold">Aa</p> */}
+        <p className="">{size}px</p>
 
         <div className="flex flex-col pl-4 lg:pl-4 lg:pr-2 gap-2 w-full xl:w-52">
           <div className="relative h-3">
@@ -17,12 +30,12 @@ export default function FontSize() {
             </div>
             <input
               type="range"
-              min={100}
-              max={900}
+              min={16}
+              max={96}
+              value={size}
+              onChange={handleChange}
               className="thumb-filter"
-              // value={weight}
-              // onChange={(e) => setWeight(Number(e.target.value))}
-              // aria-label={`Font weight, currently ${weight}`}
+              aria-label={`Font size, currently ${size}px`}
             />
           </div>
         </div>
