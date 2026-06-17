@@ -1,12 +1,26 @@
 "use client";
 
-export default function Width() {
+import { useState } from "react";
+
+export default function Width({
+  onValueChange,
+}: {
+  onValueChange?: (value: number) => void;
+}) {
+  const [spacing, setSpacing] = useState(100);
+
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const newSpacing = Number(event.target.value);
+    setSpacing(newSpacing);
+    onValueChange?.(newSpacing);
+  }
+
   return (
     <>
       <div className="flex flex-col p-4 gap-2">
         <div className="flex flex-row gap-4">
-          <p className="w-full">Width</p>
-          <p className="w-full text-right">100</p>
+          <p className="w-full">Letter spacing</p>
+          <p className="w-full text-right">{spacing}</p>
         </div>
 
         <div className="relative h-3">
@@ -18,16 +32,14 @@ export default function Width() {
           </div>
           <input
             type="range"
-            min={100}
-            max={900}
+            min={75}
+            max={125}
+            value={spacing}
+            onChange={handleChange}
             className="weight-slider"
-            // value={weight}
-            // onChange={(e) => setWeight(Number(e.target.value))}
-            // aria-label={`Font weight, currently ${weight}`}
+            aria-label={`Letter spacing, currently ${spacing}`}
           />
         </div>
-
-        {/* <input type="range" min={12} max={80} className="w-full" /> */}
       </div>
     </>
   );

@@ -1,6 +1,12 @@
+"use client";
+
 import { Switch } from "radix-ui";
 
-export default function Italic() {
+export default function Italic({
+  onCheckedChange,
+}: {
+  onCheckedChange?: (checked: boolean) => void;
+}) {
   return (
     <>
       <div className="flex flex-row p-4 gap-2 items-center">
@@ -15,6 +21,7 @@ export default function Italic() {
           <Switch.Root
             className="relative h-[32px] w-[64px] cursor-default rounded-full bg-[#EBEAD4] outline-none data-[state=checked]:bg-[#DAD33A] cursor-pointer"
             id="airplane-mode"
+            onCheckedChange={onCheckedChange}
           >
             <Switch.Thumb
               id="airplane-mode"

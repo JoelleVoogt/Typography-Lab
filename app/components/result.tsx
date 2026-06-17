@@ -1,9 +1,15 @@
 export default function Result({
   text,
   fontSize,
+  letterSpacing,
+  fontWeight,
+  italic,
 }: {
   text: string;
   fontSize: number;
+  letterSpacing: number;
+  fontWeight: number;
+  italic: boolean;
 }) {
   return (
     <>
@@ -13,6 +19,9 @@ export default function Result({
           style={{
             fontSize: `${fontSize}px`,
             lineHeight: fontSize >= 40 ? 1.1 : 1.3,
+            letterSpacing: `${(letterSpacing - 100) * 0.004}em`,
+            fontWeight,
+            fontStyle: italic ? "italic" : "normal",
           }}
         >
           {text}

@@ -39,6 +39,9 @@ export default function Custom() {
   const [customText, setCustomText] = useState("");
   const [caseType, setCaseType] = useState<CaseType>("Sentence case");
   const [fontSize, setFontSize] = useState(36);
+  const [letterSpacing, setLetterSpacing] = useState(100);
+  const [fontWeight, setFontWeight] = useState(400);
+  const [italic, setItalic] = useState(false);
 
   return (
     <>
@@ -53,12 +56,12 @@ export default function Custom() {
         </div>
         <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 py-2 xl:py-10">
           <div className="flex flex-co gap-1 lg:gap-4 flex-col py-0 xl:pt-8 justify-start w-full xl:w-md">
-            <Width />
-            <Weight />
-            <Italic />
+            <Width onValueChange={setLetterSpacing} />
+            <Weight onValueChange={setFontWeight} />
+            <Italic onCheckedChange={setItalic} />
           </div>
           <div className="hidden xl:block w-px self-stretch bg-[#6E6D64] rounded-md"></div>
-          <Result text={applyCase(customText || CONTENT[mode], caseType)} fontSize={fontSize} />
+          <Result text={applyCase(customText || CONTENT[mode], caseType)} fontSize={fontSize} letterSpacing={letterSpacing} fontWeight={fontWeight} italic={italic} />
         </div>
       </section>
     </>
