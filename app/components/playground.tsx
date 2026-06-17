@@ -9,7 +9,7 @@ export default function Playground() {
   return (
     <section
       id="playground"
-      className="max-w-7xl mx-auto px-4 pt-16 pb-32 lg:pt-40 lg:pb-56"
+      className="max-w-7xl mx-auto px-4 pt-16 md:pt-32 pb-32 lg:pt-40 lg:pb-56"
     >
       <div
         className={`border-2 border-cream bg-[#222221] rounded-2xl py-48 sm:py-30 px-6 sm:px-8 flex items-center justify-center overflow-hidden cursor-text transition-shadow duration-100 ${
