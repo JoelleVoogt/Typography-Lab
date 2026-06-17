@@ -7,7 +7,10 @@ export default function Playground() {
   const [focused, setFocused] = useState(false);
 
   return (
-    <section id="playground" className="max-w-7xl mx-auto px-4 pt-20 pb-60">
+    <section
+      id="playground"
+      className="max-w-7xl mx-auto px-4 pt-32 pb-48 lg:pt-32 lg:pb-72"
+    >
       <div
         className={`border-2 border-cream bg-[#222221] rounded-2xl py-48 sm:py-30 px-6 sm:px-8 flex items-center justify-center overflow-hidden cursor-text transition-shadow duration-100 ${
           focused

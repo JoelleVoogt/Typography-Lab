@@ -5,6 +5,7 @@ import Explanation from "./components/explanation";
 import WeightSection from "./components/weight";
 import Playground from "./components/playground";
 import Filtering from "./components/filtering";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <WeightSection />
       <Playground />
       <Filtering />
+      <Footer />
     </div>
   );
 }

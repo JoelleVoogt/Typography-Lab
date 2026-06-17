@@ -8,7 +8,7 @@ export default function Italic() {
           <label
             id="airplane-mode-label"
             htmlFor="airplane-mode"
-            className="pr-[15px] leading-none text-white"
+            className="pr-[15px] leading-none"
           >
             Italic
           </label>
