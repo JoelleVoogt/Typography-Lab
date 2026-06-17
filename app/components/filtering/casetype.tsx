@@ -1,9 +1,13 @@
 import { Select } from "radix-ui";
 import { ChevronDown } from "lucide-react";
 
-export default function CaseType() {
+export default function CaseType({
+  onValueChange,
+}: {
+  onValueChange?: (value: string) => void;
+}) {
   return (
-    <Select.Root defaultValue="Sentence case">
+    <Select.Root defaultValue="Sentence case" onValueChange={onValueChange}>
       <Select.Trigger className="group border-r border-r-[#54544d] flex gap-2 h-14 items-center px-4 hidden lg:flex w-sm outline-none cursor-default data-[state=open]:bg-[rgba(235,234,212,0.2)]">
         <Select.Value />
         <Select.Icon asChild>

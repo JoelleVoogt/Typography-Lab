@@ -16,9 +16,28 @@ const CONTENT = {
   Alphabet: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
 };
 
+type CaseType = "Sentence case" | "UPPERCASE" | "lower case" | "Title case";
+
+function applyCase(text: string, caseType: CaseType) {
+  switch (caseType) {
+    case "Sentence case":
+      return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+    case "UPPERCASE":
+      return text.toUpperCase();
+    case "lower case":
+      return text.toLowerCase();
+    case "Title case":
+      return text.replace(
+        /\w\S*/g,
+        (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+      );
+  }
+}
+
 export default function Custom() {
   const [mode, setMode] = useState<"Story" | "Alphabet">("Story");
   const [customText, setCustomText] = useState("");
+  const [caseType, setCaseType] = useState<CaseType>("Sentence case");
 
   return (
     <>
@@ -28,7 +47,7 @@ export default function Custom() {
             onValueChange={(value) => setMode(value as "Story" | "Alphabet")}
           />
           <TypeSomething onValueChange={setCustomText} />
-          <CaseType />
+          <CaseType onValueChange={(value) => setCaseType(value as CaseType)} />
           <FontSize />
         </div>
         <div className="flex flex-col xl:flex-row gap-4 xl:gap-10 py-2 xl:py-10">
@@ -38,7 +57,7 @@ export default function Custom() {
             <Italic />
           </div>
           <div className="hidden xl:block w-px self-stretch bg-[#6E6D64] rounded-md"></div>
-          <Result text={customText || CONTENT[mode]} />
+          <Result text={applyCase(customText || CONTENT[mode], caseType)} />
         </div>
       </section>
     </>
