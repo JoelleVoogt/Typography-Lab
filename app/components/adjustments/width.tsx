@@ -36,7 +36,7 @@ export default function Width({
             max={125}
             value={spacing}
             onChange={handleChange}
-            className="weight-slider"
+            className="thumb-filter"
             aria-label={`Letter spacing, currently ${spacing}`}
           />
         </div>

@@ -49,7 +49,7 @@ export default function Weight({
             step={100}
             value={weight}
             onChange={handleChange}
-            className="weight-slider"
+            className="thumb-filter"
             aria-label={`Font weight, currently ${labels[weight]}`}
           />
         </div>

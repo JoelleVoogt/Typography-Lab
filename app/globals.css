@@ -115,6 +115,12 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 1024px) {
+  .thumb-filter::-webkit-slider-thumb {
+    outline-color: #1a1a1a;
+  }
+}
+
 /* Type indicator blink */
 @keyframes blink {
   0%,
