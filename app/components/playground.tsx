@@ -9,7 +9,7 @@ export default function Playground() {
   return (
     <section id="playground" className="max-w-7xl mx-auto px-4 pt-20 pb-60">
       <div
-        className={`border-2 border-cream bg-[#222221] rounded-2xl py-20 sm:py-30 px-6 sm:px-8 flex items-center justify-center overflow-hidden cursor-text transition-shadow duration-100 ${
+        className={`border-2 border-cream bg-[#222221] rounded-2xl py-48 sm:py-30 px-6 sm:px-8 flex items-center justify-center overflow-hidden cursor-text transition-shadow duration-100 ${
           focused
             ? "border-solid shadow-[0_0_0_2px_#ebead4,0_0_0_6px_#dad33a]"
             : "border-dashed"
