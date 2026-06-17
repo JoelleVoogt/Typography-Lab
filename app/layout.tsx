@@ -14,8 +14,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Typography Playground",
-  description: "A playground for the Fraunces typeface",
+  title: "Typography Lab",
+  description: "A playground for any font family.",
   openGraph: {
     images: ["/light.png"], // place this in /public
   },
