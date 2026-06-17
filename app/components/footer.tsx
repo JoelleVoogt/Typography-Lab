@@ -1,10 +1,10 @@
 export default function Footer() {
   return (
     <div
-      className="relative w-full bottom-0 left-0 border-t-2 border-t-cream"
+      className="relative w-full bottom-0 left-0 border-t border-t-[#6E6D64]"
       id="footer"
     >
-      <div className="flex flex-col md:flex-row justify-between max-w-7xl mx-auto p-4 md:py-4 py-12 gap-4">
+      <div className="flex flex-col md:flex-row justify-between max-w-7xl mx-auto p-4 md:py-8 py-12 gap-4">
         {" "}
         <p className="text-sm text-surface-200 font-mono">
           // Built with VSCode & Next.js

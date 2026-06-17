@@ -4,7 +4,7 @@ import Hero from "./components/hero";
 import Explanation from "./components/explanation";
 import WeightSection from "./components/weight";
 import Playground from "./components/playground";
-import Filtering from "./components/filtering";
+import Custom from "./components/custom";
 import Footer from "./components/footer";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
       <Explanation />
       <WeightSection />
       <Playground />
-      <Filtering />
+      <Custom />
       <Footer />
     </div>
   );

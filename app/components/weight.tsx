@@ -9,7 +9,7 @@ function WeightCard({ defaultWeight }: { defaultWeight: number }) {
   return (
     <div className="flex flex-col gap-1 md:gap-4 flex-1 min-w-0">
       <p
-        className="text-cream leading-[1.2] w-full font-display text-[200px] sm:text-[168px] lg:text-[287px]"
+        className="text-cream leading-[1.2] w-full font-display text-[160px] sm:text-[168px] lg:text-[287px]"
         style={{
           fontWeight: weight,
           fontVariationSettings: FV,
@@ -51,7 +51,7 @@ export default function WeightSection() {
   return (
     <section
       id="weights"
-      className="max-w-7xl mx-auto px-4 pb-30 sm:pb-40 flex flex-col sm:flex-row gap-16 md:gap-8 xl:gap-20 sm:items-start"
+      className="max-w-7xl mx-auto px-4 pb-30 sm:pb-12 flex flex-col sm:flex-row gap-8 md:gap-8 xl:gap-20 sm:items-start"
     >
       <WeightCard defaultWeight={100} />
       <WeightCard defaultWeight={400} />
