@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <div
-      className="relative w-full bottom-0 left-0 border-t border-t-[#34342f]"
+      className="relative w-full bottom-0 left-0 border-t border-t-[#46463c]"
       id="footer"
     >
       <div className="flex flex-col md:flex-row justify-between max-w-7xl mx-auto p-4 md:py-8 py-12 gap-4">

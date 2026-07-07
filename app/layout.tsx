@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Typography Lab",
   description: "A playground for any font family.",
   openGraph: {
-    images: ["/light.png"], // place this in /public
+    images: ["/thumbnail.png"],
   },
 };
 
