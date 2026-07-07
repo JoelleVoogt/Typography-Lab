@@ -1,68 +1,70 @@
 # Typography Playground
 
+Een interactieve showcase voor het variabele lettertype [Fraunces](https://fraunces.undercase.xyz/), gebouwd met Next.js en Tailwind CSS. Het is een plek om een lettertypefamilie te _voelen_ in plaats van er alleen over te lezen — elke sectie laat je een as van het lettertype aanpassen en het resultaat live zien.
+
+Live: [typography-playground-nine.vercel.app](https://typography-playground-nine.vercel.app/)
+
 ![Typography Playground thumbnail](public/thumbnail.png)
 
-An interactive showcase for the [Fraunces](https://fraunces.undercase.xyz/) variable font, built with Next.js and Tailwind CSS. It's a place to *feel* a font family instead of just reading about it — every section lets you adjust an axis of the type and see the result update live.
+## Wat het doet
 
-## What it does
+De pagina is één doorlopende scrollflow van secties (`app/page.tsx`):
 
-The page is a single scrolling flow of sections (`app/page.tsx`):
-
-- **Nav** — sticky header with anchor links to the Family, Weights and Playground sections.
-- **Hero (Family)** — a full-bleed, oversized display of "Fraunces" to introduce the typeface.
-- **Explanation** — short intro copy explaining the goal of the playground.
-- **Weights** — three `WeightCard`s (starting at 100, 400 and 900) that each have their own range slider, letting you compare font weight side by side on the same "Ra" sample in real time.
-- **Playground** — a large `contentEditable` text field where you can type anything and see it rendered in Fraunces at display size, with an animated cursor.
-- **Custom** — the main experimentation panel:
-  - Choose between a **Story** (pangram) or **Alphabet** sample, or type your own text
-  - Switch text casing: Sentence case, UPPERCASE, lower case, Title case
-  - Control **font size**, **letter spacing**, **weight** (100–900 via variable font axes) and an **italic** toggle
-  - See all adjustments applied live to the sample text in the `Result` preview
+- **Nav** — sticky header met ankerlinks naar de secties Family, Weights en Playground.
+- **Hero (Family)** — een full-bleed, extra grote weergave van "Fraunces" ter introductie van het lettertype.
+- **Explanation** — korte introductietekst die het doel van de playground uitlegt.
+- **Weights** — drie `WeightCard`s (beginnend bij 100, 400 en 900), elk met een eigen schuifregelaar, waarmee je het lettergewicht naast elkaar kunt vergelijken op hetzelfde "Ra"-voorbeeld, in real time.
+- **Playground** — een groot `contentEditable` tekstveld waarin je vrij kunt typen en het resultaat op weergaveformaat in Fraunces ziet, met een geanimeerde cursor.
+- **Custom** — het belangrijkste experimenteerpaneel:
+  - Kies tussen een **Story** (pangram) of **Alphabet** voorbeeld, of typ je eigen tekst
+  - Wissel van tekstcasing: Sentence case, HOOFDLETTERS, kleine letters, Title case
+  - Regel **lettergrootte**, **letterspatiëring**, **gewicht** (100–900 via variabele lettertype-assen) en een **cursief**-schakelaar
+  - Zie alle aanpassingen live toegepast op de voorbeeldtekst in de `Result`-preview
 - **Footer** — credits.
 
-Font style is driven through CSS variable-font axes (`SOFT`, `WONK`) defined in `app/lib/constants.ts` and applied via inline `fontVariationSettings`, combined with standard `font-weight`/`font-style`/`letter-spacing` for the adjustable properties.
+De stijl van het lettertype wordt aangestuurd via CSS variable-font-assen (`SOFT`, `WONK`), gedefinieerd in `app/lib/constants.ts` en toegepast via inline `fontVariationSettings`, gecombineerd met standaard `font-weight`/`font-style`/`letter-spacing` voor de aanpasbare eigenschappen.
 
 ## Tech stack
 
 - [Next.js 16](https://nextjs.org) (App Router)
 - [React 19](https://react.dev)
 - [Tailwind CSS v4](https://tailwindcss.com)
-- [Radix UI](https://www.radix-ui.com/) — `Select` and `Switch` primitives for the filter/adjustment controls
-- [Lucide](https://lucide.dev/) — icons
+- [Radix UI](https://www.radix-ui.com/) — `Select`- en `Switch`-primitieven voor de filter-/aanpassingsregelaars
+- [Lucide](https://lucide.dev/) — iconen
 - [Lenis](https://lenis.darkroom.engineering/) — smooth scrolling
 - TypeScript
-- Fraunces & Inter loaded via `next/font/google`
+- Fraunces & Inter geladen via `next/font/google`
 
-## Project structure
+## Projectstructuur
 
 ```
 app/
 ├── layout.tsx              # Root layout, fonts, metadata
-├── page.tsx                # Assembles all sections in order
-├── globals.css             # Tailwind + global styles
+├── page.tsx                # Zet alle secties in volgorde samen
+├── globals.css             # Tailwind + globale stijlen
 ├── lib/
-│   └── constants.ts         # Shared font-variation-settings (FV)
+│   └── constants.ts         # Gedeelde font-variation-settings (FV)
 └── components/
-    ├── nav.tsx               # Sticky header / anchor nav
-    ├── hero.tsx              # "Family" section
-    ├── explanation.tsx       # Intro copy
-    ├── weight.tsx             # "Weights" section (WeightCard x3)
-    ├── playground.tsx        # ContentEditable "Playground" section
-    ├── custom.tsx             # "Custom" panel: state + layout wiring
-    ├── result.tsx             # Live preview of the customized text
+    ├── nav.tsx               # Sticky header / anker-nav
+    ├── hero.tsx              # "Family"-sectie
+    ├── explanation.tsx       # Introductietekst
+    ├── weight.tsx             # "Weights"-sectie (WeightCard x3)
+    ├── playground.tsx        # ContentEditable "Playground"-sectie
+    ├── custom.tsx             # "Custom"-paneel: state + layout-koppeling
+    ├── result.tsx             # Live preview van de aangepaste tekst
     ├── footer.tsx             # Footer
-    ├── filtering/            # Controls that pick *which* text is shown
+    ├── filtering/            # Regelaars die bepalen *welke* tekst wordt getoond
     │   ├── story.tsx           # Story / Alphabet select
-    │   ├── typesomething.tsx   # Free-text input
-    │   ├── casetype.tsx        # Text-case select
-    │   └── fontsize.tsx        # Font-size slider
-    └── adjustments/          # Controls that change *how* the text looks
-        ├── width.tsx           # Letter-spacing slider
-        ├── weight.tsx          # Weight slider
-        └── italic.tsx          # Italic switch
+    │   ├── typesomething.tsx   # Vrije-tekstinvoer
+    │   ├── casetype.tsx        # Tekstcasing-select
+    │   └── fontsize.tsx        # Lettergrootte-slider
+    └── adjustments/          # Regelaars die bepalen *hoe* de tekst eruitziet
+        ├── width.tsx           # Letterspatiëring-slider
+        ├── weight.tsx           # Gewicht-slider
+        └── italic.tsx          # Cursief-schakelaar
 ```
 
-## Getting started
+## Aan de slag
 
 ```bash
 npm install
@@ -73,9 +75,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start dev server |
-| `npm run build` | Production build |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
+| Command         | Omschrijving             |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start dev-server          |
+| `npm run build` | Productie-build           |
+| `npm run start` | Start productieserver     |
+| `npm run lint`  | Voer ESLint uit            |
