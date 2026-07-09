@@ -1,6 +1,6 @@
 # Typography Playground
 
-Een interactieve showcase voor het variabele lettertype [Fraunces](https://fraunces.undercase.xyz/), gebouwd met Next.js en Tailwind CSS. Het is een plek om een lettertypefamilie te _voelen_ in plaats van er alleen over te lezen — elke sectie laat je een as van het lettertype aanpassen en het resultaat live zien.
+Een interactieve showcase voor het variabele lettertype [Fraunces](https://fraunces.undercase.xyz/), gebouwd met Next.js en Tailwind CSS. Het is een plek om een lettertypefamilie te _voelen_ in plaats van er alleen over te lezen. Elke sectie laat je een as van het lettertype aanpassen en het resultaat live zien.
 
 Live: [typography-playground-nine.vercel.app](https://typography-playground-nine.vercel.app/)
 
@@ -11,7 +11,7 @@ Live: [typography-playground-nine.vercel.app](https://typography-playground-nine
 De pagina is één doorlopende scrollflow van secties (`app/page.tsx`):
 
 - **Nav** — sticky header met ankerlinks naar de secties Family, Weights en Playground.
-- **Hero (Family)** — een full-bleed, extra grote weergave van "Fraunces" ter introductie van het lettertype.
+- **Hero (Family)** — een grote weergave van "Fraunces" ter introductie van het lettertype.
 - **Explanation** — korte introductietekst die het doel van de playground uitlegt.
 - **Weights** — drie `WeightCard`s (beginnend bij 100, 400 en 900), elk met een eigen schuifregelaar, waarmee je het lettergewicht naast elkaar kunt vergelijken op hetzelfde "Ra"-voorbeeld, in real time.
 - **Playground** — een groot `contentEditable` tekstveld waarin je vrij kunt typen en het resultaat op weergaveformaat in Fraunces ziet, met een geanimeerde cursor.
@@ -75,9 +75,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Scripts
 
-| Command         | Omschrijving             |
-| --------------- | ------------------------ |
-| `npm run dev`   | Start dev-server          |
-| `npm run build` | Productie-build           |
-| `npm run start` | Start productieserver     |
-| `npm run lint`  | Voer ESLint uit            |
+| Command         | Omschrijving          |
+| --------------- | --------------------- |
+| `npm run dev`   | Start dev-server      |
+| `npm run build` | Productie-build       |
+| `npm run start` | Start productieserver |
+| `npm run lint`  | Voer ESLint uit       |
