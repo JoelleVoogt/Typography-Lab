@@ -1,6 +1,6 @@
 # Typography Playground
 
-Een interactieve showcase voor het variabele lettertype [Fraunces](https://fraunces.undercase.xyz/), gebouwd met Next.js en Tailwind CSS. Het is een plek om een lettertypefamilie te _voelen_ in plaats van er alleen over te lezen. Elke sectie laat je een as van het lettertype aanpassen en het resultaat live zien.
+Een interactieve showcase voor het variabele lettertype [Fraunces](https://fraunces.undercase.xyz/), gebouwd met Next.js en Tailwind CSS. Het is een plek om een lettertypefamilie te _voelen_ in plaats van er alleen over te lezen. Elke sectie laat je een as van het lettertype aanpassen en het resultaat direct zien.
 
 Live: [typography-playground-nine.vercel.app](https://typography-playground-nine.vercel.app/)
 
