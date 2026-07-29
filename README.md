@@ -31,7 +31,6 @@ De stijl van het lettertype wordt aangestuurd via CSS variable-font-assen (`SOFT
 - [Tailwind CSS v4](https://tailwindcss.com)
 - [Radix UI](https://www.radix-ui.com/) — `Select`- en `Switch`-primitieven voor de filter-/aanpassingsregelaars
 - [Lucide](https://lucide.dev/) — iconen
-- [Lenis](https://lenis.darkroom.engineering/) — smooth scrolling
 - TypeScript
 - Fraunces & Inter geladen via `next/font/google`
 
