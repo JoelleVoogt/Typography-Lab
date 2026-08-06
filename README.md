@@ -58,7 +58,7 @@ app/
     │   ├── casetype.tsx        # Tekstcasing-select
     │   └── fontsize.tsx        # Lettergrootte-slider
     └── adjustments/          # Regelaars die bepalen *hoe* de tekst eruitziet
-        ├── width.tsx           # Letterspatiëring-slider
+        ├── width.tsx           # Letter spatiëring-slider
         ├── weight.tsx           # Gewicht-slider
         └── italic.tsx          # Cursief-schakelaar
 ```
