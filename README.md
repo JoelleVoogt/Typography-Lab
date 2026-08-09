@@ -10,7 +10,7 @@ Live: [typography-playground-nine.vercel.app](https://typography-playground-nine
 
 De pagina is één doorlopende scrollflow van secties (`app/page.tsx`):
 
-- **Nav** — sticky header met ankerlinks naar de secties Family, Weights en Playground
+- **Nav** — sticky header met anker links naar de secties Family, Weights en Playground
 - **Hero (Family)** — een grote weergave van "Fraunces" ter introductie van het lettertype
 - **Explanation** — korte introductietekst die het doel van de playground omschrijft
 - **Weights** — drie `WeightCard`s (beginnend bij 100, 400 en 900), elk met een eigen schuif-regelaar, waarmee je het lettergewicht naast elkaar kunt vergelijken op hetzelfde "Ra"-voorbeeld, in real time
