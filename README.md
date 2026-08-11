@@ -19,7 +19,7 @@ De pagina is één doorlopende scrollflow van secties (`app/page.tsx`):
   - Kies tussen een **Story** (pangram) of **Alphabet** voorbeeld, of typ je eigen tekst
   - Wissel van tekstcasing: Sentence case, HOOFDLETTERS, kleine letters, Title case
   - Regel **lettergrootte**, **letterspatiëring**, **gewicht** (100–900 via variabele lettertype-assen) en een **cursief**-schakelaar
-  - Zie alle aanpassingen live toegepast op de voorbeeldtekst in de `Result`-preview
+  - Zie alle aanpassingen live toegepast op de voorbeeld tekst in de `Result`-preview
 - **Footer** — credits.
 
 De stijl van het lettertype wordt aangestuurd via CSS variable-font-assen (`SOFT`, `WONK`), gedefinieerd in `app/lib/constants.ts` en toegepast via inline `fontVariationSettings`, gecombineerd met standaard `font-weight`/`font-style`/`letter-spacing` voor de aanpasbare eigenschappen.
