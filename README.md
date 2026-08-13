@@ -14,7 +14,7 @@ De pagina is één doorlopende scrollflow van secties (`app/page.tsx`):
 - **Hero (Family)** — een grote weergave van "Fraunces" ter introductie van het lettertype
 - **Explanation** — korte introductietekst die het doel van de playground omschrijft
 - **Weights** — drie `WeightCard`s (beginnend bij 100, 400 en 900), elk met een eigen schuif-regelaar, waarmee je het lettergewicht naast elkaar kunt vergelijken op hetzelfde "Ra"-voorbeeld, in real time
-- **Playground** — een groot `contentEditable` tekstveld waarin je vrij kunt typen en het resultaat op weergaveformaat in Fraunces ziet
+- **Playground** — een groot `contentEditable` tekst veld waarin je vrij kunt typen en het resultaat op weergaveformaat in Fraunces ziet
 - **Custom** — het belangrijkste experimenteerpaneel:
   - Kies tussen een **Story** (pangram) of **Alphabet** voorbeeld, of typ je eigen tekst
   - Wissel van tekstcasing: Sentence case, HOOFDLETTERS, kleine letters, Title case
